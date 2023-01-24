@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <title>DL Academy</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+
+    
+
+    <link rel="stylesheet" href="css/style.min.css?v=1674556709742">
+  </head>
+  <body>
+    <header class="header container">
+    <nav class="header__nav">
+        <a href="index.html" class="header__nav__main-anchor @@home-disabled">Home</a>
+        <ul class="header__nav__list">
+            <li>
+                <a href="blog.html" class="header__nav__list__list-item @@my-blog-active">My blog</a>
+            </li>
+            <li class="@@hide-sign-in sign-in-to-hide--js">
+                <button type="button" class="header__nav__list__list-item sign-in-modal-btn-js">Sign in</button>
+            </li>
+            <li class="@@hide-register register-to-hide--js">
+                <button type="button" class="header__nav__list__list-item register_modal-btn-js">Register</button>
+            </li>
+            <li class="hidden profile-to-show--js">
+                <a href="profile.html" class="header__nav__list__list-item @@my-profile-active">My profile</a>
+            </li>
+            <li class="hidden log-out-to-show--js">
+                <button class="header__nav__list__list-item">Log out</button>
+            </li>
+        </ul>
+    </nav>
+    <hr class="header__line">
+</header>
+
+<header class="header-mob-js hidden">
+    <nav class="header-mob__nav">
+        <ul class="header-mob__nav__list">
+            <li>
+                <button type="button" class="header-mob__close-btn"></button>
+            </li>
+            <li>
+                <a href="index.html" class="header-mob__nav__list__link home-link--js">Home</a>
+            </li>
+            <li>
+                <a href="blog.html" class="header-mob__nav__list__link blog-link--js">My blog</a>
+            </li>
+            <li class="@@hide-sign-in">
+                <button type="button" class="header-mob__nav__list__link sign-in-mob--js">Sign in</button>
+            </li>
+            <li class="@@hide-register">
+                <button type="button" class="header-mob__nav__list__link register-mob--js">Register</button>
+            </li>
+            <li class="hidden">
+                <a href="profile.html" class="header-mob__nav__list__link profile-link--js">My profile</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hidden sign-in-modal-js">
+    <div class="modal__wrap">
+        <form action="#" class="modal__form" name="signIn" novalidate>
+            <label for="sign-in-email" class="modal__form__label">Email&nbsp;<span class="color-red">*</span></label>
+            <input type="email" name="email" id="sign-in-email" class="modal__form__input" required>
+            <label for="sign-in-password" class="modal__form__label">Password&nbsp;<span class="color-red">*</span></label>
+            <input type="password" name="password" id="sign-in-password" class="modal__form__input" required>
+            <button type="submit" class="modal__form__btn">Log in</button>
+        </form>
+        <button type="button" class="modal__close-btn"></button>
+    </div>
+</section>
+<section class="hidden register-modal-js">
+    <div class="modal__wrap">
+        <form action="#" class="modal__form modal__form--register" name="register" novalidate>
+            <div class="modal__form__input-wrap modal__form__input-wrap--register-email">
+                <label for="registerEmail" class="register__label">Email&nbsp;<span class="color-red">*</span></label>
+                <input type="email" name="email" id="registerEmail" class="modal__form__input modal__form__input--email">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="registerName" class="register__label">Name&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="name" id="registerName" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="surname" class="register__label">Surame&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="surname" id="surname" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="password" class="register__label">Password&nbsp;<span class="color-red">*</span></label>
+                <input type="password" name="password" id="password" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="repeatPassword" class="register__label">Repeat password&nbsp;<span class="color-red">*</span></label>
+                <input type="password" name="repeatPassword" id="repeatPassword" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="location" class="register__label">Location&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="location" id="location" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="age" class="register__label">Age&nbsp;<span class="color-red">*</span></label>
+                <input type="number" name="age" id="age" class="modal__form__input">
+            </div>
+            <div class="modal__form__checkbox-wrap">
+                <input type="checkbox" name="agreement" id="agreement" class="checkbox checkbox--black cb-js">
+                <label for="agreement" class="modal__form__checkbox-wrap__label-disabled cb-label-js">Clicking on the button, you consent to the processing of your personal data.</label>
+            </div>
+            <button type="submit" class="modal__form__btn btn-register-js" disabled="disabled">Sign up</button>
+        </form>
+        <button type="button" class="modal__close-btn"></button>
+    </div>
+</section>
+    <main>
+      <section class="heading-section container">
+        <div class="heading-section__desc">
+          <h1>Antonina Antoninovna</h1>
+          <p>Future front-end developer 23 years old, Tolyatti</p>
+          <button type="button" class="heading-section__menu-btn"></button>
+        </div>
+        <div class="heading-section__slider">
+            <div class="slider">
+                <div class="slider__wrapper">
+                  <div class="slider__inner-wrapper">
+                    <div class="slider__slide">
+                      <picture>
+                        <source media="(max-width:376px)" srcset="/img/images/antonina_mob.jpg, /img/images/antonina_mob_2x.jpg 2x" alt="Photo of Antonina">
+                <source media="(max-width:1023px)" srcset="/img/images/antonina_tablet.jpg, /img/images/antonina_tablet_2x.jpg 2x" alt="Photo of Antonina">
+                <img src="/img/images/antonina.jpg" alt="Photo of Antonina" class="heading-section__photo">
+                      </picture>
+                    </div>
+                    <div class="slider__slide">
+                      <picture>
+                        <source media="(max-width:376px)" srcset="/img/images/antonina_mob.jpg, /img/images/antonina_mob_2x.jpg 2x" alt="Photo of Antonina">
+                <source media="(max-width:1023px)" srcset="/img/images/antonina_tablet.jpg, /img/images/antonina_tablet_2x.jpg 2x" alt="Photo of Antonina">
+                <img src="/img/images/antonina.jpg" alt="Photo of Antonina" class="heading-section__photo">
+                      </picture>
+                    </div>
+                    <div class="slider__slide">
+                      <picture>
+                        <source media="(max-width:376px)" srcset="/img/images/antonina_mob.jpg, /img/images/antonina_mob_2x.jpg 2x" alt="Photo of Antonina">
+                <source media="(max-width:1023px)" srcset="/img/images/antonina_tablet.jpg, /img/images/antonina_tablet_2x.jpg 2x" alt="Photo of Antonina">
+                <img src="/img/images/antonina.jpg" alt="Photo of Antonina" class="heading-section__photo">
+                      </picture>
+                    </div>
+                    <div class="slider__slide">
+                      <picture>
+                        <source media="(max-width:376px)" srcset="/img/images/antonina_mob.jpg, /img/images/antonina_mob_2x.jpg 2x" alt="Photo of Antonina">
+                <source media="(max-width:1023px)" srcset="/img/images/antonina_tablet.jpg, /img/images/antonina_tablet_2x.jpg 2x" alt="Photo of Antonina">
+                <img src="/img/images/antonina.jpg" alt="Photo of Antonina" class="heading-section__photo">
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__bottom-panel">
+                  <button class="heading-section__slider__controls__arrow heading-section__slider__controls__arrow--left slider__button slider__button--back slider__button--back--js"></button>
+                  <div class="slider__pagination slider__pagination--js"></div>
+                  <button class="heading-section__slider__controls__arrow heading-section__slider__controls__arrow--right slider__button slider__button--next slider__button--next--js"></button>
+                </div>
+              </div>
+        </div>
+      </section>
+      <section class="about-me">
+        <h2 class="about-me__title">About me</h2>
+        <div class="about-me__text-wrap container">
+            <p class="about-me__quote about-me__quote--right">Aliquam tortor molestie turpis est tristique. Congue diam orci amet quis semper ut. Vitae aenean nibh facilisis urna, ultricies euismod nunc. Commodo fringilla sit hendrerit consequat. Vel ac elit vel sagittis.</p>
+            <p class="about-me__quote about-me__quote--left">Tincidunt id quis pellentesque rutrum pretium. Egestas aliquam dictum ipsum nisl, sed pulvinar. Commodo elit sed a fermentum non justo. Etiam platea consectetur.</p>
+            <p class="about-me__quote about-me__quote--right">Quam ipsum odio tellus etiam aliquam dolor ut hendrerit. Felis risus nec vitae nunc ultricies placerat. Nullam nec felis eu id dolor pellentesque tristique. </p>
+        </div>
+      </section>
+      <section class="skills container">
+        <h2>Skills</h2>
+        <span class="skills__text">I work in such programs as</span>
+        <ul class="skills__list">
+          <li class="skills__list__list-item">
+    <img src="/img/icons/html.svg" alt="HTML">
+    <span class="skills__list__list-item__name">HTML</span>
+    <div class="skills__list__list-item__percent">
+      <span>85%</span>
+      <div class="skills__list__list-item__percent-range skills__list__list-item__percent-range--html"></div>
+    </div>
+  </li>
+          <li class="skills__list__list-item">
+    <img src="/img/icons/css.svg" alt="CSS/SCSS">
+    <span class="skills__list__list-item__name">CSS/SCSS</span>
+    <div class="skills__list__list-item__percent">
+      <span>55%</span>
+      <div class="skills__list__list-item__percent-range skills__list__list-item__percent-range--css"></div>
+    </div>
+  </li>
+          <li class="skills__list__list-item">
+    <img src="/img/icons/js.svg" alt="JavaScript">
+    <span class="skills__list__list-item__name">JavaScript</span>
+    <div class="skills__list__list-item__percent">
+      <span>5%</span>
+      <div class="skills__list__list-item__percent-range skills__list__list-item__percent-range--js"></div>
+    </div>
+  </li>
+          <li class="skills__list__list-item">
+    <img src="/img/icons/git.svg" alt="Git">
+    <span class="skills__list__list-item__name">Git/GitHub</span>
+    <div class="skills__list__list-item__percent">
+      <span>15%</span>
+      <div class="skills__list__list-item__percent-range skills__list__list-item__percent-range--git"></div>
+    </div>
+  </li>
+          <li class="skills__list__list-item">
+    <img src="/img/icons/figma.svg" alt="Figma">
+    <span class="skills__list__list-item__name">Figma</span>
+    <div class="skills__list__list-item__percent">
+      <span>80%</span>
+      <div class="skills__list__list-item__percent-range skills__list__list-item__percent-range--figma"></div>
+    </div>
+  </li>
+        </ul>
+      </section>
+      <section class="portfolio">
+        <h2 class="portfolio__title">Portfolio</h2>
+        <div class="portfolio__list-wrap container">
+          <div class="portfolio__list swiper">
+            <div class="portfolio__list__list-item swiper-wrapper">
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(max-width:376px)" srcset="/img/images/portfolio_slide_1_mob.png" alt="DLK site screenshot">
+                  <img src="/img/images/portfolio_slide_1.png" alt="DLK site screenshot">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(max-width:376px)" srcset="/img/images/portfolio_slide_2_mob.png" alt="DLK site screenshot">
+                  <img src="/img/images/portfolio_slide_2.png" alt="DLK site screenshot">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source media="(max-width:376px)" srcset="/img/images/portfolio_slide_3_mob.png" alt="DLK site screenshot">
+                  <img src="/img/images/portfolio_slide_3.png" alt="DLK site screenshot">
+                </picture>
+              </div>
+            </div>
+            <button type="button" class="swiper-button-prev"></button>
+            <button type="button" class="swiper-button-next"></button>
+          </div>
+          <div class="portfolio__list__text-wrap">
+            <a href="#" class="portfolio__list__text-wrap__project-name">Learning site for DL Academy courses</a>
+            <p class="portfolio__list__text-wrap__project-desc">A simple multi-page static site. The design layout was in Figma. HTML and CSS were used. The site is responsive and cross-browser, but without adding interactivity via JavaScript.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+  <h2>Contacts</h2>
+  <span class="footer__text">Want to know more or just chat? You are welcome!</span>
+  <button type="button" class="footer__btn msg-btn-js">Send message</button>
+  <ul class="footer__socials-list">
+    <li class="footer__socials-list__list-item">
+      <a href="http://instagram.com" class="btn">Instagram</a>
+    </li>
+    <li class="footer__socials-list__list-item">
+      <a href="http://vk.com" class="btn">Vk</a>
+    </li>
+    <li class="footer__socials-list__list-item">
+      <a href="http://telegram.org" class="btn">Telegram</a>
+    </li>
+    <li class="footer__socials-list__list-item">
+      <a href="http://mail.ru" class="btn">Mail</a>
+    </li>
+    <li class="footer__socials-list__list-item">
+      <a href="http://github.com" class="btn">GitHub</a>
+    </li>
+    <li class="footer__socials-list__list-item">
+      <a href="tel:+71234567890" class="btn">Phone</a>
+    </li>
+  </ul>
+  <span class="footer__design-by">Design by <a href="https://dlacademy.ru/" class="dashed-underline">DL Academy</a></span>
+  <span class="footer__code-by">Program code from Antonina</span>
+</footer>
+<section class="hidden message-modal-js">
+    <div class="modal__wrap">
+        <form action="#" class="modal__form modal__form--register" name="message" novalidate>
+            <div class="modal__form__input-wrap">
+                <label for="name" class="register__label">What is your name?&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="name" id="name" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="subject" class="register__label">Message subject&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="subject" id="subject" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="email" class="register__label">Your Email&nbsp;<span class="color-red">*</span></label>
+                <input type="email" name="email" id="email" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="phone" class="register__label">Your mobile phone&nbsp;<span class="color-red">*</span></label>
+                <input type="tel" name="phone" id="phone" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap modal__form__input-wrap--message">
+                <label for="message" class="register__label">What do you want to discuss with me?</label>
+                <textarea name="message" id="message" cols="30" rows="10" class="modal__form__input"></textarea>
+            </div>
+            <div class="modal__form__checkbox-wrap">
+                <input type="checkbox" name="msg-agreement" id="msg-agreement" class="checkbox checkbox--black cb-js">
+                <label for="msg-agreement" class="modal__form__checkbox-wrap__label-disabled cb-label-js">Clicking on the button, you consent to the processing of your personal data.</label>
+            </div>
+            <button type="submit" class="modal__form__btn modal__form__btn--register btn-register-js" disabled="disabled">Send</button>
+        </form>
+        <button type="button" class="modal__close-btn modal__close-btn--msg"></button>
+    </div>
+</section>
+
+    <button type="button" class="hidden scroll-btn"></button>
+    <div class="hidden preloader preloader--js">
+    <img src="/img/icons/preloader.gif" alt="preloader" class="preloader__img">
+</div>
+    <script src="js/index.js"></script>
+    <script src="js/openMenu.js"></script>
+    <script src="js/signInModal.js"></script>
+    <script src="js/registerModal.js"></script>
+    <script src="js/messageModal.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/swiper.js"></script>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="css/style.min.css?v=1674556709742">
+
+    <title>My profile</title>
+</head>
+<body>
+    <header class="header container">
+    <nav class="header__nav">
+        <a href="index.html" class="header__nav__main-anchor header__disabled-page">Home</a>
+        <ul class="header__nav__list">
+            <li>
+                <a href="blog.html" class="header__nav__list__list-item @@my-blog-active">My blog</a>
+            </li>
+            <li class="hidden sign-in-to-hide--js">
+                <button type="button" class="header__nav__list__list-item sign-in-modal-btn-js">Sign in</button>
+            </li>
+            <li class="hidden register-to-hide--js">
+                <button type="button" class="header__nav__list__list-item register_modal-btn-js">Register</button>
+            </li>
+            <li class="@@hide-profile profile-to-show--js">
+                <a href="profile.html" class="header__nav__list__list-item header__active-page">My profile</a>
+            </li>
+            <li class="hidden log-out-to-show--js">
+                <button class="header__nav__list__list-item">Log out</button>
+            </li>
+        </ul>
+    </nav>
+    <hr class="header__line">
+</header>
+
+<header class="header-mob-js hidden">
+    <nav class="header-mob__nav">
+        <ul class="header-mob__nav__list">
+            <li>
+                <button type="button" class="header-mob__close-btn"></button>
+            </li>
+            <li>
+                <a href="index.html" class="header-mob__nav__list__link home-link--js">Home</a>
+            </li>
+            <li>
+                <a href="blog.html" class="header-mob__nav__list__link blog-link--js">My blog</a>
+            </li>
+            <li class="hidden">
+                <button type="button" class="header-mob__nav__list__link sign-in-mob--js">Sign in</button>
+            </li>
+            <li class="hidden">
+                <button type="button" class="header-mob__nav__list__link register-mob--js">Register</button>
+            </li>
+            <li class="@@hide-profile">
+                <a href="profile.html" class="header-mob__nav__list__link profile-link--js">My profile</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hidden sign-in-modal-js">
+    <div class="modal__wrap">
+        <form action="#" class="modal__form" name="signIn" novalidate>
+            <label for="sign-in-email" class="modal__form__label">Email&nbsp;<span class="color-red">*</span></label>
+            <input type="email" name="email" id="sign-in-email" class="modal__form__input" required>
+            <label for="sign-in-password" class="modal__form__label">Password&nbsp;<span class="color-red">*</span></label>
+            <input type="password" name="password" id="sign-in-password" class="modal__form__input" required>
+            <button type="submit" class="modal__form__btn">Log in</button>
+        </form>
+        <button type="button" class="modal__close-btn"></button>
+    </div>
+</section>
+<section class="hidden register-modal-js">
+    <div class="modal__wrap">
+        <form action="#" class="modal__form modal__form--register" name="register" novalidate>
+            <div class="modal__form__input-wrap modal__form__input-wrap--register-email">
+                <label for="registerEmail" class="register__label">Email&nbsp;<span class="color-red">*</span></label>
+                <input type="email" name="email" id="registerEmail" class="modal__form__input modal__form__input--email">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="registerName" class="register__label">Name&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="name" id="registerName" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="surname" class="register__label">Surame&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="surname" id="surname" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="password" class="register__label">Password&nbsp;<span class="color-red">*</span></label>
+                <input type="password" name="password" id="password" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="repeatPassword" class="register__label">Repeat password&nbsp;<span class="color-red">*</span></label>
+                <input type="password" name="repeatPassword" id="repeatPassword" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="location" class="register__label">Location&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="location" id="location" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="age" class="register__label">Age&nbsp;<span class="color-red">*</span></label>
+                <input type="number" name="age" id="age" class="modal__form__input">
+            </div>
+            <div class="modal__form__checkbox-wrap">
+                <input type="checkbox" name="agreement" id="agreement" class="checkbox checkbox--black cb-js">
+                <label for="agreement" class="modal__form__checkbox-wrap__label-disabled cb-label-js">Clicking on the button, you consent to the processing of your personal data.</label>
+            </div>
+            <button type="submit" class="modal__form__btn btn-register-js" disabled="disabled">Sign up</button>
+        </form>
+        <button type="button" class="modal__close-btn"></button>
+    </div>
+</section>
+    <main>
+        <section class="profile container">
+            <h1 class="profile__title">My profile</h1>
+            <div class="page-title-mob">
+                <h1>My profile</h1>
+                <button type="button" class="heading-section__menu-btn"></button>
+            </div>
+            <div class="profile-wrap">
+                <img width="320" height="450" alt="picture" class="profile__img profile-image--js">
+                <div class="profile__info">
+                    <div class="profile__info__wrap profile__info__wrap--name">
+                        <span class="profile__info__type-of-data">Name:</span>
+                        <span class="profile-name--js"></span>
+                    </div>
+                    <div class="profile__info__wrap profile__info__wrap--surname">
+                        <span class="profile__info__type-of-data">Surame:</span>
+                        <span class="profile-surname--js"></span>
+                    </div>
+                    <div class="profile__info__wrap profile__info__wrap--email">
+                        <span class="profile__info__type-of-data">Email:</span>
+                        <span class="profile-email--js"></span>
+                    </div>
+                    <div class="profile__info__wrap profile__info__wrap--password">
+                        <span class="profile__info__type-of-data">Pasword:</span>
+                        <span>**********</span>
+                    </div>
+                    <div class="profile__info__wrap profile__info__wrap--location">
+                        <span class="profile__info__type-of-data">Location:</span>
+                        <span class="profile-location--js"></span>
+                    </div>
+                    <div class="profile__info__wrap profile__info__wrap--age">
+                        <span class="profile__info__type-of-data">Age:</span>
+                        <span class="profile-age--js"></span>
+                    </div>
+                    <div class="profile__info__btn-wrap">
+                        <button type="button" class="btn password-btn-js">Change password</button>
+                        <button type="button" class="btn data-btn-js">Change other data</button>
+                        <button type="button" class="btn delete-profile-js">Delete account</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="hidden change-password-modal-js">
+    <div class="modal__wrap password-wrap--js">
+        <form action="#" class="modal__form" name="changePassword" novalidate>
+            <label for="oldPassword" class="modal__form__label">Old password&nbsp;<span class="color-red">*</span></label>
+            <input type="password" name="oldPassword" id="oldPassword" class="modal__form__input" required>
+            <label for="newPassword" class="modal__form__label">New password&nbsp;<span class="color-red">*</span></label>
+            <input type="password" name="newPassword" id="newPassword" class="modal__form__input" required>
+            <label for="repeatNewPassword" class="modal__form__label">Repeat new password&nbsp;<span class="color-red">*</span></label>
+            <input type="password" name="repeatNewPassword" id="repeatNewPassword" class="modal__form__input" required>
+            <button type="submit" class="modal__form__btn">Change password</button>
+        </form>
+        <button type="button" class="modal__close-btn"></button>
+    </div>
+</section>
+    <section class="hidden change-data-modal-js">
+    <div class="modal__wrap">
+        <form action="#" class="modal__form modal__form--change-data" name="changeData" novalidate>
+            
+            <div class="modal__form__input-wrap modal__form__input-wrap--register-email">
+                <label for="changeEmail">Email</label>
+                <input type="email" name="email" id="changeEmail" class="modal__form__input modal__form__input--email">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="changeName">Name</label>
+                <input type="text" name="name" id="changeName" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="changeSurname">Surame</label>
+                <input type="text" name="surname" id="changeSurname" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="changeLocation">Location</label>
+                <input type="text" name="location" id="changeLocation" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="changeAge">Age</label>
+                <input type="number" name="age" id="changeAge" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap modal__form__input-wrap--file">
+                <label for="picture">Profile picture</label>
+                <input type="file" name="avatar" id="picture" class="modal__form__input modal__form__input--file">
+            </div>
+            <div class="modal__form__btn-wrap">
+                <button type="submit" class="modal__form__btn modal__form__btn--change-data">Submit changes</button>
+            </div>
+        </form>
+        <button type="button" class="modal__close-btn"></button>
+    </div>
+</section>
+    <div class="hidden preloader preloader--js">
+    <img src="/img/icons/preloader.gif" alt="preloader" class="preloader__img">
+</div>
+    <button type="button" class="hidden scroll-btn"></button>
+    <script src="js/index.js"></script>
+    <script src="js/openMenu.js"></script>
+    
+    <script src="js/profile_v2.js"></script>
+</body>
+</html>

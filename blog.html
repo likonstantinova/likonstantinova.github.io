@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.min.css" rel="stylesheet">
+    <title>My blog</title>
+</head>
+<body>
+    <header class="header container">
+    <nav class="header__nav">
+        <a href="index.html" class="header__nav__main-anchor header__disabled-page">Home</a>
+        <ul class="header__nav__list">
+            <li>
+                <a href="blog.html" class="header__nav__list__list-item header__active-page">My blog</a>
+            </li>
+            <li class="hidden sign-in-to-hide--js">
+                <button type="button" class="header__nav__list__list-item sign-in-modal-btn-js">Sign in</button>
+            </li>
+            <li class="hidden register-to-hide--js">
+                <button type="button" class="header__nav__list__list-item register_modal-btn-js">Register</button>
+            </li>
+            <li class="@@hide-profile profile-to-show--js">
+                <a href="profile.html" class="header__nav__list__list-item @@my-profile-active">My profile</a>
+            </li>
+            <li class="hidden log-out-to-show--js">
+                <button class="header__nav__list__list-item">Log out</button>
+            </li>
+        </ul>
+    </nav>
+    <hr class="header__line">
+</header>
+
+<header class="header-mob-js hidden">
+    <nav class="header-mob__nav">
+        <ul class="header-mob__nav__list">
+            <li>
+                <button type="button" class="header-mob__close-btn"></button>
+            </li>
+            <li>
+                <a href="index.html" class="header-mob__nav__list__link home-link--js">Home</a>
+            </li>
+            <li>
+                <a href="blog.html" class="header-mob__nav__list__link blog-link--js">My blog</a>
+            </li>
+            <li class="hidden">
+                <button type="button" class="header-mob__nav__list__link sign-in-mob--js">Sign in</button>
+            </li>
+            <li class="hidden">
+                <button type="button" class="header-mob__nav__list__link register-mob--js">Register</button>
+            </li>
+            <li class="@@hide-profile">
+                <a href="profile.html" class="header-mob__nav__list__link profile-link--js">My profile</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hidden sign-in-modal-js">
+    <div class="modal__wrap">
+        <form action="#" class="modal__form" name="signIn" novalidate>
+            <label for="sign-in-email" class="modal__form__label">Email&nbsp;<span class="color-red">*</span></label>
+            <input type="email" name="email" id="sign-in-email" class="modal__form__input" required>
+            <label for="sign-in-password" class="modal__form__label">Password&nbsp;<span class="color-red">*</span></label>
+            <input type="password" name="password" id="sign-in-password" class="modal__form__input" required>
+            <button type="submit" class="modal__form__btn">Log in</button>
+        </form>
+        <button type="button" class="modal__close-btn"></button>
+    </div>
+</section>
+<section class="hidden register-modal-js">
+    <div class="modal__wrap">
+        <form action="#" class="modal__form modal__form--register" name="register" novalidate>
+            <div class="modal__form__input-wrap modal__form__input-wrap--register-email">
+                <label for="registerEmail" class="register__label">Email&nbsp;<span class="color-red">*</span></label>
+                <input type="email" name="email" id="registerEmail" class="modal__form__input modal__form__input--email">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="registerName" class="register__label">Name&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="name" id="registerName" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="surname" class="register__label">Surame&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="surname" id="surname" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="password" class="register__label">Password&nbsp;<span class="color-red">*</span></label>
+                <input type="password" name="password" id="password" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="repeatPassword" class="register__label">Repeat password&nbsp;<span class="color-red">*</span></label>
+                <input type="password" name="repeatPassword" id="repeatPassword" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="location" class="register__label">Location&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="location" id="location" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="age" class="register__label">Age&nbsp;<span class="color-red">*</span></label>
+                <input type="number" name="age" id="age" class="modal__form__input">
+            </div>
+            <div class="modal__form__checkbox-wrap">
+                <input type="checkbox" name="agreement" id="agreement" class="checkbox checkbox--black cb-js">
+                <label for="agreement" class="modal__form__checkbox-wrap__label-disabled cb-label-js">Clicking on the button, you consent to the processing of your personal data.</label>
+            </div>
+            <button type="submit" class="modal__form__btn btn-register-js" disabled="disabled">Sign up</button>
+        </form>
+        <button type="button" class="modal__close-btn"></button>
+    </div>
+</section>
+    <main class="container">
+        <section class="blog">
+            <h1 class="blog__title">My blog</h1>
+            <div class="page-title-mob">
+                <h1>My blog</h1>
+                <button type="button" class="heading-section__menu-btn"></button>
+            </div>
+            <form class="blog__filter-section" name="filter">
+                <div class="blog__filter-section__filters-wrap">
+                    <fieldset class="blog__filter-section__filter blog__filter-section__filter--tags">
+                        <legend class="blog__filter-section__filter__name">Tags</legend>
+                    </fieldset>
+                    <fieldset class="blog__filter-section__filter blog__filter-section__filter--views">
+                        <legend class="blog__filter-section__filter__name">Views</legend>
+                        <div class="blog__filter-section__filter__input-wrap">
+                            <input type="radio" name="views" id="few" value="100-500" class="blog__filter-section__filter__radio">
+                            <label for="few">100-500</label>
+                        </div>
+                        <div class="blog__filter-section__filter__input-wrap">
+                            <input type="radio" name="views" id="more" value="500-1000" class="blog__filter-section__filter__radio">
+                            <label for="more">500-1000</label>
+                        </div>
+                        <div class="blog__filter-section__filter__input-wrap">
+                            <input type="radio" name="views" id="many" value="1000-2000" class="blog__filter-section__filter__radio">
+                            <label for="many">1000-2000</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="blog__filter-section__filter blog__filter-section__filter--comments">
+                        <legend class="blog__filter-section__filter__name">Comments</legend>
+                        <div class="blog__filter-section__filter__input-wrap">
+                            <input type="checkbox" name="comments" id="no-comments" value="0" class="checkbox checkbox--black">
+                            <label for="no-comments">0</label>
+                        </div>
+                        <div class="blog__filter-section__filter__input-wrap">
+                            <input type="checkbox" name="comments" id="one-comment" value="0-1" class="checkbox checkbox--black">
+                            <label for="one-comment">0-1</label>
+                        </div>
+                        <div class="blog__filter-section__filter__input-wrap">
+                            <input type="checkbox" name="comments" id="few-comments" value="1-50" class="checkbox checkbox--black">
+                            <label for="few-comments">1-50</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="blog__filter-section__filter blog__filter-section__filter--how-show">
+                        <legend class="blog__filter-section__filter__name">How show?</legend>
+                        <div class="blog__filter-section__filter__input-wrap">
+                            <input type="radio" name="howShow" id="show-5" value="show-5" class="blog__filter-section__filter__radio">
+                            <label for="show-5">show 5</label>
+                        </div>
+                        <div class="blog__filter-section__filter__input-wrap">
+                            <input type="radio" name="howShow" id="show-10" value="show-10" class="blog__filter-section__filter__radio">
+                            <label for="show-10">show 10</label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="blog__filter-section__filter blog__filter-section__filter--sort">
+                        <legend class="blog__filter-section__filter__name">Sort by</legend>
+                        <div class="blog__filter-section__filter__input-wrap">
+                            <input type="radio" name="sort" id="date" value="date" class="blog__filter-section__filter__radio">
+                            <label for="date">date</label>
+                        </div>
+                        <div class="blog__filter-section__filter__input-wrap">
+                            <input type="radio" name="sort" id="title" value="title" class="blog__filter-section__filter__radio">
+                            <label for="title">title</label>
+                        </div>
+                        <div class="blog__filter-section__filter__input-wrap">
+                            <input type="radio" name="sort" id="views" value="views" class="blog__filter-section__filter__radio">
+                            <label for="views">views</label>
+                        </div>
+                    </fieldset>
+                    <button type="reset" class="btn blog__filter-section__btn">Reset</button>
+                </div>
+                <div class="blog__filter-section__search">
+                    <input type="search" id="search" name="search">
+                    <label for="search">
+                        <button type="submit" class="btn">Search</button>
+                    </label>
+                </div>
+            </form>
+            <hr>
+            <div class="blog__filter-section__posts blog__filter-section__posts--js">
+
+            </div>
+        </section>
+        <div class="blog__pagination">
+            <button class="heading-section__slider__controls__arrow heading-section__slider__controls__arrow--left blog__pagination__btn__prev--js"></button>
+            <div class="blog__list__pagination__links blog__pagination--js"></div>
+            <button class="heading-section__slider__controls__arrow heading-section__slider__controls__arrow--right blog__pagination__btn__next--js"></button>
+          </div>
+        
+    </main>
+    <footer class="footer">
+  <h2>Contacts</h2>
+  <span class="footer__text">Want to know more or just chat? You are welcome!</span>
+  <button type="button" class="footer__btn msg-btn-js">Send message</button>
+  <ul class="footer__socials-list">
+    <li class="footer__socials-list__list-item">
+      <a href="http://instagram.com" class="btn">Instagram</a>
+    </li>
+    <li class="footer__socials-list__list-item">
+      <a href="http://vk.com" class="btn">Vk</a>
+    </li>
+    <li class="footer__socials-list__list-item">
+      <a href="http://telegram.org" class="btn">Telegram</a>
+    </li>
+    <li class="footer__socials-list__list-item">
+      <a href="http://mail.ru" class="btn">Mail</a>
+    </li>
+    <li class="footer__socials-list__list-item">
+      <a href="http://github.com" class="btn">GitHub</a>
+    </li>
+    <li class="footer__socials-list__list-item">
+      <a href="tel:+71234567890" class="btn">Phone</a>
+    </li>
+  </ul>
+  <span class="footer__design-by">Design by <a href="https://dlacademy.ru/" class="dashed-underline">DL Academy</a></span>
+  <span class="footer__code-by">Program code from Antonina</span>
+</footer>
+<section class="hidden message-modal-js">
+    <div class="modal__wrap">
+        <form action="#" class="modal__form modal__form--register" name="message" novalidate>
+            <div class="modal__form__input-wrap">
+                <label for="name" class="register__label">What is your name?&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="name" id="name" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="subject" class="register__label">Message subject&nbsp;<span class="color-red">*</span></label>
+                <input type="text" name="subject" id="subject" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="email" class="register__label">Your Email&nbsp;<span class="color-red">*</span></label>
+                <input type="email" name="email" id="email" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap">
+                <label for="phone" class="register__label">Your mobile phone&nbsp;<span class="color-red">*</span></label>
+                <input type="tel" name="phone" id="phone" class="modal__form__input">
+            </div>
+            <div class="modal__form__input-wrap modal__form__input-wrap--message">
+                <label for="message" class="register__label">What do you want to discuss with me?</label>
+                <textarea name="message" id="message" cols="30" rows="10" class="modal__form__input"></textarea>
+            </div>
+            <div class="modal__form__checkbox-wrap">
+                <input type="checkbox" name="msg-agreement" id="msg-agreement" class="checkbox checkbox--black cb-js">
+                <label for="msg-agreement" class="modal__form__checkbox-wrap__label-disabled cb-label-js">Clicking on the button, you consent to the processing of your personal data.</label>
+            </div>
+            <button type="submit" class="modal__form__btn modal__form__btn--register btn-register-js" disabled="disabled">Send</button>
+        </form>
+        <button type="button" class="modal__close-btn modal__close-btn--msg"></button>
+    </div>
+</section>
+
+    <button type="button" class="hidden scroll-btn"></button>
+    <div class="hidden preloader preloader--js">
+    <img src="/img/icons/preloader.gif" alt="preloader" class="preloader__img">
+</div>
+    <script src="js/index.js"></script>
+    <script src="js/openMenu.js"></script>
+    <script src="js/messageModal.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>
